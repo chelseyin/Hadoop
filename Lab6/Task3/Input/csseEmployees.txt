@@ -1,0 +1,14 @@
+Sriram,Mohan,Databases,1
+Chandan,Rupakheti,Static Analyzers,2
+Micah,Taylor,Graphics,3
+Cary,Laxer,Graphics,4
+JP,Mellor,Systems,5
+David,Mutchler,Artificial Intelligence,6
+Matt,Boutell,Mobile Operating Systems,7
+David,Fisher,Web Development,8
+Michael,Wollowski,Cognitive Computing,9
+Buffalo,Hewner,CS Education,10
+Mark,Hays,Quality Assurance,11
+Delvin,Defoe,Operating Systems,12
+Shawn,Bohner,Software Maintenenace,13
+Steve,Chenoweth,Software Architecture,14
