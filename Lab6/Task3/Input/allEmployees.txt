@@ -1,0 +1,25 @@
+Sriram,Mohan,Databases,csse,1
+Chandan,Rupakheti,Static Analyzers,csse,2
+Micah,Taylor,Graphics,csse,3
+Cary,Laxer,Graphics,csse,4
+JP,Mellor,Systems,csse,5
+David,Mutchler,Artificial Intelligence,csse,6
+Matt,Boutell,Mobile Operating Systems,csse,7
+David,Fisher,Web Development,csse,8
+Michael,Wollowski,Cognitive Computing,csse,9
+Buffalo,Hewner,CS Education,csse,10
+Mark,Hays,Quality Assurance,csse,11
+Delvin,Defoe,Operating Systems,csse,12
+Shawn,Bohner,Software Maintenenace,csse,13
+Steve,Chenoweth,Software Architecture,csse,14
+Carlotta,Berry,Robotics,ece,21
+Robert,Throne,Electronics,ece,22
+Deborah,Walter,Amplifiers,ece,23
+Daniel,Chang,Architecture,ece,24
+Mark,Yoder,Embedded Systems,ece,25
+Jim,Conwell,President,admin,51
+Rob,Coons,CEO,admin,52
+Philip,Cornwell,Vice President,admin,53
+Rick,Stamper,Dean,admin,54
+Pete,Gustafsson,Vice President,admin,55
+Tom,Miller,Dean,admin,56
