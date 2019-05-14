@@ -5,11 +5,11 @@
             <job-tracker>${jobTracker}</job-tracker>
             <name-node>${nameNode}</name-node>
             <prepare>
-                  <delete path="${nameNode}/tmp/mapredOutput/"/>
+                  <delete path="${nameNode}/tmp/deploy/MapReduce/output/"/>
             </prepare>
-            <main-class>edu.rosehulman.mohan.MaxTemperature</main-class>
-            <arg>${nameNode}/tmp/mapredInput/sample.txt</arg>
-            <arg>${nameNode}/tmp/mapredOutput/</arg>
+            <main-class>edu.rosehulman.yinc.FriendList</main-class>
+            <arg>${nameNode}/tmp/deploy/MapReduce/input/friends.txt</arg>
+            <arg>${nameNode}/tmp/deploy/MapReduce/output</arg>
         </java>
         <ok to="end"/>
         <error to="kill"/>
