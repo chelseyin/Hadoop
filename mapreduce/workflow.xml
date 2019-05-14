@@ -5,11 +5,11 @@
             <job-tracker>${jobTracker}</job-tracker>
             <name-node>${nameNode}</name-node>
             <prepare>
-                  <delete path="${nameNode}/tmp/deploy/MapReduce/output/"/>
+                  <delete path="${nameNode}/tmp/deploy/MapReduce-yinc/output/"/>
             </prepare>
             <main-class>edu.rosehulman.yinc.FriendListDriver</main-class>
-            <arg>${nameNode}/tmp/deploy/MapReduce/input/friends.txt</arg>
-            <arg>${nameNode}/tmp/deploy/MapReduce/output</arg>
+            <arg>${nameNode}/tmp/deploy/MapReduce-yinc/input/friends.txt</arg>
+            <arg>${nameNode}/tmp/deploy/MapReduce-yinc/output</arg>
         </java>
         <ok to="end"/>
         <error to="kill"/>
