@@ -1,0 +1,17 @@
+<workflow-app name="Sqoop" xmlns="uri:oozie:workflow:0.4">
+    <start to="sqoopJob"/>
+    <action name="sqoopJob">
+        <sqoop xmlns="uri:oozie:sqoop-action:0.2">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <job-xml>/tmp/deploy/Sqoop/hive-site.xml</job-xml>
+            <command>export --connect jdbc:mysql://10.128.0.4:3306/sqooptest --username hive --password chicago2019crime -m 1 --table task2 --export-dir ${nameNode}/tmp/lab8/task2 --input-fields-terminated-by ,</command>
+        </sqoop>
+        <ok to="end"/>
+        <error to="kill"/>
+    </action>
+    <kill name="kill">
+        <message>Action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    <end name="end"/>
+</workflow-app>
