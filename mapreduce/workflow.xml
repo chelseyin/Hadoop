@@ -7,7 +7,7 @@
             <prepare>
                   <delete path="${nameNode}/tmp/deploy/MapReduce/output/"/>
             </prepare>
-            <main-class>edu.rosehulman.yinc.FriendList</main-class>
+            <main-class>edu.rosehulman.yinc.FriendListDriver</main-class>
             <arg>${nameNode}/tmp/deploy/MapReduce/input/friends.txt</arg>
             <arg>${nameNode}/tmp/deploy/MapReduce/output</arg>
         </java>
