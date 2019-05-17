@@ -1,3 +1,12 @@
+import findspark
+findspark.init()
+import pyspark # Call this only after findspark.init()
+from pyspark.context import SparkContext
+from pyspark.sql.session import SparkSession
+
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+
 import numpy as py
 from pyspark.ml.feature import StringIndexer
 from pyspark.ml.feature import Normalizer
