@@ -63,4 +63,5 @@ dtmodel = pipeline.fit(trainingData)
 dtpredictions = dtmodel.transform(testData)     
 dtevaluator = MulticlassClassificationEvaluator(labelCol="indexedLabel", predictionCol="prediction", metricName="accuracy")
 dtaccuracy = dtevaluator.evaluate(dtpredictions)
-print("decision-tree", dtaccuracy)
+dt=['decision-tree',str(dtaccuracy)]
+print(', '.join(dt))
