@@ -5,7 +5,7 @@
             <job-tracker>${jobTracker}</job-tracker>
             <name-node>${nameNode}</name-node>
             <job-xml>/tmp/shared/hive-site.xml</job-xml>
-            <command>export --connect jdbc:mysql://10.128.0.2:3306/chicagocrime --username hive --password password123 -m 1 --table modelresult --export-dir ${nameNode}/chicago/export_model/input --input-fields-terminated-by ,</command>
+            <command>export --connect jdbc:mysql://10.128.0.2:3306/chicagocrime --username hive --password password123 -m 1 --table modelresult --export-dir ${nameNode}/user/root/chicago/export_model/input --input-fields-terminated-by ,</command>
         </sqoop>
         <ok to="end"/>
         <error to="kill"/>
