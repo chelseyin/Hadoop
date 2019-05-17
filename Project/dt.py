@@ -29,6 +29,8 @@ from pyspark.ml.classification import LogisticRegression, OneVsRest
 from pyspark.ml.classification import NaiveBayes
 from pyspark.sql import HiveContext
 
+# decision tree
+
 df = spark.read.format("csv").option("header", "true").load("chicago/data/food-inspections-new.csv")
 
 df=df.na.drop()
@@ -61,5 +63,4 @@ dtmodel = pipeline.fit(trainingData)
 dtpredictions = dtmodel.transform(testData)     
 dtevaluator = MulticlassClassificationEvaluator(labelCol="indexedLabel", predictionCol="prediction", metricName="accuracy")
 dtaccuracy = dtevaluator.evaluate(dtpredictions)
-print("Test Error = %g " % (1.0 - dtaccuracy))
-print(dtaccuracy)
+print("decision-tree", dtaccuracy)
