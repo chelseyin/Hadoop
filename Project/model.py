@@ -134,7 +134,6 @@ rfpipeline = Pipeline(stages=[labelIndexer, featureIndexer, rf, labelConverter])
 
 rfmodel = rfpipeline.fit(trainingData)
 rfpredictions = rfmodel.transform(testData)
-rfpredictions.select("predictedLabel", "label", "features").show(5)
 rfevaluator = MulticlassClassificationEvaluator(labelCol="indexedLabel", predictionCol="prediction", metricName="accuracy")
 rfaccuracy = rfevaluator.evaluate(rfpredictions)
 rf=['RandomForest',str(rfaccuracy)]
