@@ -58,13 +58,13 @@ labelIndexer = StringIndexer(inputCol="label", outputCol="indexedLabel").fit(df)
 
 pipeline = Pipeline(stages=[labelIndexer, featureIndexer, dt])
 
-(trainingData, testData) = df.randomSplit([0.1, 0.9]) 
+(trainingData, testData) = df.randomSplit([0.5, 0.5]) 
 dtmodel = pipeline.fit(trainingData)
 dtpredictions = dtmodel.transform(testData)     
 dtevaluator = MulticlassClassificationEvaluator(labelCol="indexedLabel", predictionCol="prediction", metricName="accuracy")
 dtaccuracy = dtevaluator.evaluate(dtpredictions)
 dt=['DecisionTree',str(dtaccuracy)]
-print(', '.join(dt))
+print(','.join(dt))
 
 # LogisticRegression
 
@@ -97,7 +97,7 @@ lrpredictions = lrModel.transform(test)
 lrevaluator = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
 lraccuracy = lrevaluator.evaluate(lrpredictions)
 lr=['LogisticRegression',str(lraccuracy)]
-print(', '.join(lr))
+print(','.join(lr))
 
 # RandomForest
 
@@ -137,4 +137,4 @@ rfpredictions = rfmodel.transform(testData)
 rfevaluator = MulticlassClassificationEvaluator(labelCol="indexedLabel", predictionCol="prediction", metricName="accuracy")
 rfaccuracy = rfevaluator.evaluate(rfpredictions)
 rf=['RandomForest',str(rfaccuracy)]
-print(', '.join(rf))
+print(','.join(rf))
